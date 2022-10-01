@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<!--
+    DONE    - Decide if polynomial -- yes / no
+    DONE        - Decide degree of polynomial -- range input
+    DONE        - Enter all coefficients -- integer table input (table lenght of degree)
+    TODO    - Enter expression if not polynomial -- text input
+    TODO    - Set interval of interest -- 2 double input (from... to...)
+    TODO    - Display roots of the polynomial -- output table
+-->
+
+<html lang+"en">
+	<head>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		
+		<link rel="stylesheet" href="style.css">
+		
+		<title>Function Analyzer</title>
+	</head>
+
+	<body>
+		<div class="header-img"> <div class="header">
+			<div class="header-div center">
+				<h1 class="title left">Function Analyzer</h1>
+				<h1 class="title right">&#8212 Web App</h1>
+			</div>
+			<button type="button" class="btn-circle horizontal-center" id="goDown01" onClick="document.getElementById('mainPol').scrollIntoView({behavior:'smooth',})">↓</button>
+		</div> </div>
+		
+
+		<div class="mainFlex" id="mainPol">
+
+			<h2 class="mainTitle">Is your function a Polynomial?</h2>
+			<p class="main-text">
+				A polynomial is an expression that consists of variables
+				(or indeterminate), terms, exponents and constants.
+				For example, x<sup>3</sup>+3x<sup>2</sup>-2x-10 is a polynomial.
+			</p>
+
+			<div class="centerFlex">
+				<div>
+					<input type="radio" class="btn-check" name="isPolRadio" id="PolYes" autocomplete="off" checked>
+					<label class="btn radio-button isPolRadio" for="PolYes">Yes</label>
+					
+					<input type="radio" class="btn-check" name="isPolRadio" id="PolNo" autocomplete="off" checked>
+					<label class="btn  radio-button isPolRadio" for="PolNo">No</label>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="mainFlex" id="mainDeg">
+
+			<h2 class="mainTitle">What is the degree of your Polynomial?</h2>
+			<p class="main-text">
+				The degree of an individual term of a polynomial is the exponent
+				of its variable. The degree of the polynomial is the highest
+				degree of all of the terms.	For example, the degree of
+				x<sup>3</sup>+3x<sup>2</sup>-2x-10 is 3 because x<sup>3</sup> is the
+				term with the highest exponent.
+			</p>
+
+			<div class="spacer"></div>
+
+			<div class="centerFlex">
+				<div style="width:75%;">
+					<h3 id="rangeLabel" for="degreeRange" style="margin-bottom: 5vmin;">Your function must be a Polynomial</h3>
+					<input type="range" disabled="disabled" class="form-range" min="0" max="20" step="1" id="degreeRange">
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="mainFlex" id="mainCoeff">
+
+			<h2>Enter the coefficients of your Polynomial...</h2>
+			<p class="main-text">
+				Polynomial coefficients are the numbers that come before a term.
+				Terms usually have a number and a variable (e.g. 3x<sup>5</sup>+2x
+				where 3 and 2 are the numbers, and x is the variable). All
+				number portions of the Polynomial make its coefficients.
+			</p>
+
+			<div class="spacer" style="height: 0vh;"></div>
+
+			<div class="centerFlex">
+				<div style="width:90%;">
+					<table class="table">
+						<thead>
+						  <tr>
+							<th scope="col">Coefficent</th>
+							<th scope="col">Variable</th>
+						  </tr>
+						</thead>
+						<tbody id="tableBodyCoeff">
+						</tbody>
+					</table>
+					<h3 id="polynomial-title">Your function must be a Polynomial</h3>
+					<h3 class="polynomial"></h3>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="mainFlex" id="mainExp">
+
+			<h2>Type your mathematical function...</h2>
+			<p class="main-text">
+				A mathematical function is an expression that relates an input
+				with a single output. To enter your expression, just type on
+				the text field below. Try to be as most precise as possible.
+			</p>
+
+			<div class="spacer"></div>
+
+			<div class="centerFlex">
+				<div class="input-group" style="width: 90%;">
+					<span class="input-group-text" id="basic-addon1"> f(x) = </span>
+					<input autocomplete="off" id="expInput" disabled="true" type="text" class="form-control" placeholder="Enter the coefficients in the table above"/>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="mainFlex" id="mainInt">
+
+			<h2>Set interval of interest...</h2>
+			<p class="main-text">
+				If your expression is not a Polynomial, you must specify
+				an interval in which we will restrict the lookup of the
+				roots. We have to do this because some functions that are
+				not Polynomials can have an infinite amount of roots.
+				If your function is a Polynomial, you can still specify an
+				interval, or just leave this field blank.
+			</p>
+
+			<div class="spacer"></div>
+
+			<div class="centerFlex">
+				<div class="centerFlex" style="align-items: baseline;">
+					<h3>From </h3>
+					<input autocomplete="off" id="interval1" type="text" class="myInput"/>
+				</div>
+				<div class="centerFlex" style="flex-direction: row; align-items: baseline;">
+					<h3>To </h3>
+					<input autocomplete="off" id="interval2" type="text" class="myInput"/>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="mainFlex" id="mainRoots">
+
+			<h2>These are the roots of your Polynomial...</h2>
+			<p class="main-text">
+				The roots of a polynomial are those values of the
+				variable that cause the polynomial to evaluate to zero.
+				The roots are also called solutions.
+			</p>
+
+			<div class="centerFlex">
+				<input type="button" class="btn" id="loadRoots" value="Display"/>
+
+				<div class="spacer"></div>
+
+				<div id="rootsResults" style="width: 90%">
+				</div>
+			</div>
+
+		</div>
+		
+
+		<button class="btn-circle back-to-top hidden">↑</button>
+	</body>
+
+	<footer>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		
+		<script src=".../../node_modules/mathjs/lib/browser\math.js"></script>
+		<script type="module" src="src/script.js"></script>
+	</footer>
+</html> 
