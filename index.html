@@ -24,7 +24,7 @@
 				<h1 class="title left">Function Analyzer</h1>
 				<h1 class="title right">&#8212 Web App</h1>
 			</div>
-			<button type="button" class="btn-circle horizontal-center" id="goDown01" onClick="document.getElementById('mainPol').scrollIntoView({behavior:'smooth',})">↓</button>
+			<button type="button" class="btn-circle horizontal-center" id="goDown01" onClick="document.getElementById('mainPol').scrollIntoView({behavior:'smooth',})">v</button>
 		</div> </div>
 		
 
@@ -32,9 +32,9 @@
 
 			<h2 class="mainTitle">Is your function a Polynomial?</h2>
 			<p class="main-text">
-				A polynomial is an expression that consists of variables
-				(or indeterminate), terms, exponents and constants.
-				For example, x<sup>3</sup>+3x<sup>2</sup>-2x-10 is a polynomial.
+				A polynomial is an expression that consists of variables,
+				terms, exponents and constants.
+				For example, x<sup>3</sup>+3x<sup>2</sup>-2x-10 is a polynomial and sin(x) is not.
 			</p>
 
 			<div class="centerFlex">
@@ -59,6 +59,7 @@
 				degree of all of the terms.	For example, the degree of
 				x<sup>3</sup>+3x<sup>2</sup>-2x-10 is 3 because x<sup>3</sup> is the
 				term with the highest exponent.
+				<b>If your function is NOT a polynomial, skip this.</b>
 			</p>
 
 			<div class="spacer"></div>
@@ -81,6 +82,7 @@
 				Terms usually have a number and a variable (e.g. 3x<sup>5</sup>+2x
 				where 3 and 2 are the numbers, and x is the variable). All
 				number portions of the Polynomial make its coefficients.
+				<b>If your function is NOT a polynomial, skip this.</b>
 			</p>
 
 			<div class="spacer" style="height: 0vh;"></div>
@@ -111,6 +113,7 @@
 				A mathematical function is an expression that relates an input
 				with a single output. To enter your expression, just type on
 				the text field below. Try to be as most precise as possible.
+				<b>If your function is a polynomial, you can skip this.</b>
 			</p>
 
 			<div class="spacer"></div>
@@ -133,8 +136,8 @@
 				an interval in which we will restrict the lookup of the
 				roots. We have to do this because some functions that are
 				not Polynomials can have an infinite amount of roots.
-				If your function is a Polynomial, you can still specify an
-				interval, or just leave this field blank.
+				<b>If your function is a Polynomial, you can still specify an
+				interval, or just leave this field blank.</b>
 			</p>
 
 			<div class="spacer"></div>
@@ -155,10 +158,10 @@
 
 		<div class="mainFlex" id="mainRoots">
 
-			<h2>These are the roots of your Polynomial...</h2>
+			<h2>These are the roots of your Function...</h2>
 			<p class="main-text">
-				The roots of a polynomial are those values of the
-				variable that cause the polynomial to evaluate to zero.
+				The roots of a functions are those values of the
+				variable that cause the function to evaluate to zero.
 				The roots are also called solutions.
 			</p>
 
@@ -174,7 +177,7 @@
 		</div>
 		
 
-		<button class="btn-circle back-to-top hidden">↑</button>
+		<button class="btn-circle back-to-top hidden">^</button>
 	</body>
 
 	<footer>

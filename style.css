@@ -284,3 +284,7 @@ td {
     margin: 0 0 0 0;
     padding: 0;
 }
+
+.coeffCell {
+    position: absolute;
+}
