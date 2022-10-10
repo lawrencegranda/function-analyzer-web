@@ -1,5 +1,7 @@
 import Function from './Function.js';
 
+
+// button that moves the user's view to the top
 function topButton() {
     const backToTopButton = document.querySelector(".back-to-top")
 
@@ -23,6 +25,7 @@ function topButton() {
 }
 
 
+// button to check if it is a polynomial
 var isPolynomial = false;
 
 function PolRadioButtons() {
@@ -72,6 +75,7 @@ function PolRadioButtons() {
 }
 
 
+// Range/Sldier to get the degree of the Polynomial
 var coefficients;
 var degree = undefined;
 
@@ -91,6 +95,7 @@ function degreeRange() {
 }
 
 
+// Make a table where the user can input the coefficients of the polynomial
 var expression;
 
 function coeffTable(rows) {
@@ -122,6 +127,7 @@ function coeffTable(rows) {
 }
 
 
+// get the string representation of the Function
 function getStringExpression() {
     document.querySelector("#expInput").addEventListener('blur', (e) => {
         expression = new Function(e.target.value);
@@ -131,6 +137,7 @@ function getStringExpression() {
 }
 
 
+// get the interval of interest
 let minmax = new Array(2);
 
 function getInterval() {
@@ -152,6 +159,7 @@ function getInterval() {
 }
 
 
+// get and display the roots/solutions of the function
 var roots;
 
 function getRoots() {
@@ -173,7 +181,7 @@ function getRoots() {
             let innerHtml = "";
 
             for (let i = 0; i < roots.length; i++) {
-                innerHtml += '<tr> <th scope="row">' + i + '</th> <td class="rootCell">' + roots[i] + '</td> </tr>';
+                innerHtml += '<tr> <th scope="row">' + (i+1) + '</th> <td class="rootCell">' + roots[i] + '</td> </tr>';
             }
             table.innerHTML = innerHtml;
         }
@@ -188,14 +196,5 @@ function main() {
     getStringExpression();
     getRoots();
 }
-
-/*
-    DONE    - Decide if polynomial
-    DONE        - Decide degree of polynomial
-    DONE        - Enter all coefficients
-    TODO    - Enter expression if not polynomial
-    TODO    - Set interval of interest
-    TODO    - Display roots of the polynomial 
-*/
 
 main();
