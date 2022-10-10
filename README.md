@@ -15,5 +15,3 @@ The getRoot method in Function.js calls NewtonsMethod.js method *solve* to get t
 I chose these algorithms because they were easy to complement and work great together. Before this, I was using a more complicated combination that only worked with polynomials. I was finding 1 root over the whole domain, and then synthetically divide to get another polynomial without the root I just found, and run this until I remain with a constant. The problem with this was that it only worked with Polynomials, and it lacks precision because I was constantly dividing by the approximation of a value. So after trying a lot of combinations, I got to the *bisection* and *newton’s* combination.
 
 The combination of both algorithms works greatly, yet it is not perfect. Even though it works for most functions, if 2 roots are extremely close (0.01 apart), the method might not work, as the bisection will define that interval as an interval with no roots.
-
-More in depth information about the JavaScript can be found reading the comments.
