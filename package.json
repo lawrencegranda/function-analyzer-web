@@ -9,6 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "20.18.3"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "mathjs": "^10.0.0"
