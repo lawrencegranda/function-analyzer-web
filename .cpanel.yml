@@ -9,6 +9,3 @@ deployment:
     - /bin/cp index.html $DEPLOYPATH
     - /bin/cp package.json $DEPLOYPATH
     - /bin/cp package-lock.json $DEPLOYPATH
-    - cd $DEPLOYPATH && npm install --production
-    # Add build step if needed, for example:
-    # - cd $DEPLOYPATH && npm run build
