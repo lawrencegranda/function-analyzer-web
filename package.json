@@ -14,5 +14,5 @@
     "mathjs": "^10.0.0"
   },
   "description": "",
-  "type" : "module"
+  "type": "module"
 }
