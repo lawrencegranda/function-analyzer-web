@@ -29,4 +29,3 @@ yarn-error.log*
 *.swp
 *.swonode_modules/
 tmp/
-.htaccess

@@ -4,8 +4,6 @@ deployment:
     - export DEPLOYPATH=/home/lawrnynv/dev.lawrencegranda.com/analyzer
     - /bin/cp -R src $DEPLOYPATH
     - /bin/cp -R res $DEPLOYPATH
-    - /bin/cp server.js $DEPLOYPATH
     - /bin/cp style.css $DEPLOYPATH
     - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp package.json $DEPLOYPATH
-    - /bin/cp package-lock.json $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH

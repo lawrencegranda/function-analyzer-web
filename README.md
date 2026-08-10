@@ -16,4 +16,4 @@ These chosen algorithms complement each other effectively. Previously, a more co
 
 While this combination works well for most functions, there are some limitations. Extremely close roots (within 0.01 apart) may cause the method to fail as the bisection may define the interval as having no roots.
 
-#### Website: https://analyzer.lawrencegranda.me
+#### Website: https://dev.lawrencegranda.com/analyzer/
